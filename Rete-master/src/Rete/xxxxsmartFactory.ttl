@@ -1,0 +1,1175 @@
+# baseURI: http://cqupt.ontology/smartFactory
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cqupt.ontology/smartFactory>
+  rdf:type owl:Ontology ;
+  owl:versionInfo "Created with TopBraid Composer" ;
+.
+<http://cqupt.ontology/smartFactory#AGVDeviationFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGVDeviationFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#AGVDeviationFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVDeviationFault> ;
+  rdfs:label "AGVDeviationFault1" ;
+.
+<http://cqupt.ontology/smartFactory#AGVDirectingAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "AGVDirectingAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVSensor> ;
+.
+<http://cqupt.ontology/smartFactory#AGVDirectingAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVDirectingAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "120degree" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0degree" ;
+  rdfs:label "AGVDirectingAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "45degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#AGVDirectingFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "AGVDirectingFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#AGVDirectingFaultEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVDirectingFaultEvent> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#AGVDeviationFault1> ;
+  rdfs:label "AGVDirectingFaultEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#AGVFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "roboticARMFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#deviceEvent> ;
+.
+<http://cqupt.ontology/smartFactory#AGVLoadingFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "AGVLoadingFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#AGVLoadingFaultEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVLoadingFaultEvent> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#AGVDeviationFault1> ;
+  rdfs:label "AGVLoadingFaultEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#AGVLoadingSensor>
+  rdf:type owl:Class ;
+  rdfs:label "AGVLoadingSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVSensor> ;
+.
+<http://cqupt.ontology/smartFactory#AGVLoadingSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVLoadingSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "A311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "50KG" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0KG" ;
+  rdfs:label "AGVLoadingSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "20KG" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#AGVPoweringFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "AGVPoweringFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#AGVPoweringFaultEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVPoweringFaultEvent> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#AGVDeviationFault1> ;
+  rdfs:label "AGVPoweringFaultEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#AGVPoweringSensor>
+  rdf:type owl:Class ;
+  rdfs:label "AGVPoweringSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVSensor> ;
+.
+<http://cqupt.ontology/smartFactory#AGVPoweringSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVPoweringSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "10KW" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0KW" ;
+  rdfs:label "AGVPoweringSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "5KW/h" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#AGVPoweringstatusSensor>
+  rdf:type owl:Class ;
+  rdfs:label "poweringMonitorSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVSensor> ;
+.
+<http://cqupt.ontology/smartFactory#AGVPoweringstatusSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVPoweringstatusSensor> ;
+  <http://cqupt.ontology/smartFactory#hasStatusCode> "0" ;
+  rdfs:label "AGVPoweringstatusSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "0status" ;
+.
+<http://cqupt.ontology/smartFactory#AGVSensor>
+  rdf:type owl:Class ;
+  rdfs:label "AGVSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#sensor> ;
+.
+<http://cqupt.ontology/smartFactory#AGVSpeedingFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "AGVSpeedingFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#AGVSpeedingFaultEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVSpeedingFaultEvent> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#AGVDeviationFault1> ;
+  rdfs:label "AGVSpeedingFaultEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#AGVSpeedingSensor>
+  rdf:type owl:Class ;
+  rdfs:label "AGVSpeedingSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#AGVSensor> ;
+.
+<http://cqupt.ontology/smartFactory#AGVSpeedingSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVSpeedingSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "25KM/h" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0KM/h " ;
+  rdfs:label "AGVSpeedingSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "12KM/h" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#AGVrobot>
+  rdf:type owl:Class ;
+  rdfs:label "AGVrobot" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://cqupt.ontology/smartFactory#AGVrobot1>
+  rdf:type <http://cqupt.ontology/smartFactory#AGVrobot> ;
+  rdfs:label "AGVrobot1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm1AxisAngleFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV1AxisAngleFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm1AxisAngleFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm1AxisAngleFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "Arm1AxisAngleFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm1AxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm1AxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm1AxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm1AxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0degree" ;
+  rdfs:label "Arm1AxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "20degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm1AxisTorqueFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV1AxisTorqueFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm1AxisTorqueFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm1AxisTorqueFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.05" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLiftingFault1> ;
+  rdfs:label "Arm1AxisTorqueFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm1AxisTorqueSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm1AxisTorqueSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm1AxisTorqueSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm1AxisTorqueSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "200N·m" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0N·m" ;
+  rdfs:label "Arm1AxisTorqueSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "28N·m" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm2AxisAngleFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV2AxisAngleFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm2AxisAngleFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm2AxisAngleFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "Arm2AxisAngleFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm2AxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm2AxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm2AxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm2AxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0degree" ;
+  rdfs:label "Arm2AxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "26 degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm2AxisTorqueFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV2AxisTorqueFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm2AxisTorqueFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm2AxisTorqueFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLiftingFault1> ;
+  rdfs:label "Arm2AxisTorqueFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm2AxisTorqueSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm2AxisTorqueSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm2AxisTorqueSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm2AxisTorqueSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S11" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "200 N·m" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0 N·m" ;
+  rdfs:label "Arm2AxisTorqueSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "25 N·m" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm3AxisAngleFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV3AxisAngleFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm3AxisAngleFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm3AxisAngleFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.05" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "Arm3AxisAngleFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm3AxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm3AxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm3AxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm3AxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0degree" ;
+  rdfs:label "Arm3AxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "24N·m" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm3AxisTorqueFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV3AxisTorqueFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm3AxisTorqueFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm3AxisTorqueFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLiftingFault1> ;
+  rdfs:label "Arm3AxisTorqueFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm3AxisTorqueSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm3AxisTorqueSensor" ;
+  rdfs:label "poweringMonitorSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm3AxisTorqueSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm3AxisTorqueSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311	" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "200N·m" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0N·m" ;
+  rdfs:label "Arm3AxisTorqueSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "22N·m" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm4AxisAngleFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV4AxisAngleFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm4AxisAngleFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm4AxisAngleFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.01" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "Arm4AxisAngleFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm4AxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm4AxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm4AxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm4AxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0degree" ;
+  rdfs:label "Arm4AxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "20degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm4AxisTorqueFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV4AxisTorqueFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm4AxisTorqueFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm4AxisTorqueFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.02" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLiftingFault1> ;
+  rdfs:label "Arm4AxisTorqueFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm4AxisTorqueSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm4AxisTorqueSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm4AxisTorqueSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm4AxisTorqueSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "200N·m" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0N·m" ;
+  rdfs:label "Arm4AxisTorqueSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "19N·m" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm5AxisAngleFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV5AxisAngleFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm5AxisAngleFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm5AxisAngleFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.02" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "Arm5AxisAngleFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm5AxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm5AxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm5AxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm5AxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0 degree" ;
+  rdfs:label "Arm5AxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "18degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm5AxisTorqueFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV5AxisTorqueFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm5AxisTorqueFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm5AxisTorqueFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.02" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLiftingFault1> ;
+  rdfs:label "Arm5AxisTorqueFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm5AxisTorqueSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm5AxisTorqueSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm5AxisTorqueSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm5AxisTorqueSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "200N·m" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0N·m" ;
+  rdfs:label "Arm5AxisTorqueSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "17N·m" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm6AxisAngleFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV6AxisAngleFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm6AxisAngleFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm6AxisAngleFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.03" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "Arm6AxisAngleFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm6AxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm6AxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm6AxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm6AxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0degree" ;
+  rdfs:label "Arm6AxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "16degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#Arm6AxisTorqueFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGV6AxisTorqueFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#Arm6AxisTorqueFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm6AxisTorqueFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.02" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLiftingFault1> ;
+  rdfs:label "Arm6AxisTorqueFault1" ;
+.
+<http://cqupt.ontology/smartFactory#Arm6AxisTorqueSensor>
+  rdf:type owl:Class ;
+  rdfs:label "Arm6AxisTorqueSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#Arm6AxisTorqueSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#Arm6AxisTorqueSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "200N·m" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0N·m" ;
+  rdfs:label "Arm6AxisTorqueSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "15N·m" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#ArmXAxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "ArmXAxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#ArmXAxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#ArmXAxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  rdfs:label "ArmXAxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "14degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#ArmXAxisFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGVXAxisFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#ArmXAxisFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#ArmXAxisFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.05" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "ArmXAxisFault1" ;
+.
+<http://cqupt.ontology/smartFactory#ArmYAxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "ArmYAxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#ArmYAxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#ArmYAxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  rdfs:label "ArmYAxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "13degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#ArmYAxisFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGVYAxisFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#ArmYAxisFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#ArmYAxisFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.02" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "ArmYAxisFault1" ;
+.
+<http://cqupt.ontology/smartFactory#ArmZAxisAngleSensor>
+  rdf:type owl:Class ;
+  rdfs:label "ArmZAxisAngleSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#ArmZAxisAngleSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#ArmZAxisAngleSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "180degree" ;
+  rdfs:label "ArmZAxisAngleSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "22degree" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#ArmZAxisFault>
+  rdf:type owl:Class ;
+  rdfs:label "AGVZAxisFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#ArmZAxisFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#ArmZAxisFault> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.05" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#roboticArmLacotionFault1> ;
+  rdfs:label "ArmZAxisFault1" ;
+.
+<http://cqupt.ontology/smartFactory#COEvent>
+  rdf:type owl:Class ;
+  rdfs:label "COEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#COEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#COEvent> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#workerPoisoningEvent1> ;
+  rdfs:label "COEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#COSensor>
+  rdf:type owl:Class ;
+  rdfs:label "COSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentSensor> ;
+.
+<http://cqupt.ontology/smartFactory#COSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#COSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "100ug/m^3" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0ug/m^3" ;
+  rdfs:label "COSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "33ug/m^3" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#NO2Event>
+  rdf:type owl:Class ;
+  rdfs:label "NO2Event" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#NO2Event1>
+  rdf:type <http://cqupt.ontology/smartFactory#NO2Event> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#workerPoisoningEvent1> ;
+  rdfs:label "NO2Event1" ;
+.
+<http://cqupt.ontology/smartFactory#NO2Sensor>
+  rdf:type owl:Class ;
+  rdfs:label "NO2Sensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentSensor> ;
+.
+<http://cqupt.ontology/smartFactory#NO2Sensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#NO2Sensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "100ug/m^3" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0ug/m^3" ;
+  rdfs:label "NO2Sensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "34ug/m^3" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#O3Event>
+  rdf:type owl:Class ;
+  rdfs:label "O3Event" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#O3Event1>
+  rdf:type <http://cqupt.ontology/smartFactory#O3Event> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#workerPoisoningEvent1> ;
+  rdfs:label "O3Event1" ;
+.
+<http://cqupt.ontology/smartFactory#O3Sensor>
+  rdf:type owl:Class ;
+  rdfs:label "O3Sensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentSensor> ;
+.
+<http://cqupt.ontology/smartFactory#O3Sensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#O3Sensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "100ug/m^3" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0ug/m^3" ;
+  rdfs:label "O3Sensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "35ug/m^3" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#PM10Event>
+  rdf:type owl:Class ;
+  rdfs:label "PM10Event" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#PM10Event1>
+  rdf:type <http://cqupt.ontology/smartFactory#PM10Event> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  rdfs:label "PM10Event1" ;
+.
+<http://cqupt.ontology/smartFactory#PM10Sensor>
+  rdf:type owl:Class ;
+  rdfs:label "PM10Sensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentSensor> ;
+.
+<http://cqupt.ontology/smartFactory#PM10Sensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#PM10Sensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "100ug/m^3" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0ug/m^3" ;
+  rdfs:label "PM10Sensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "36ug/m^3" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#PM25Event>
+  rdf:type owl:Class ;
+  rdfs:label "PM25Event" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#PM25Event1>
+  rdf:type <http://cqupt.ontology/smartFactory#PM25Event> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  rdfs:label "PM25Event1" ;
+.
+<http://cqupt.ontology/smartFactory#PM25Sensor>
+  rdf:type owl:Class ;
+  rdfs:label "PM25Sensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentSensor> ;
+.
+<http://cqupt.ontology/smartFactory#PM25Sensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#PM25Sensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "100ug/m^3" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0ug/m^3" ;
+  rdfs:label "PM25Sensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "20ug/m^3" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#SO2Event>
+  rdf:type owl:Class ;
+  rdfs:label "SO2Event" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#SO2Event1>
+  rdf:type <http://cqupt.ontology/smartFactory#SO2Event> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#workerPoisoningEvent1> ;
+  rdfs:label "SO2Event1" ;
+.
+<http://cqupt.ontology/smartFactory#SO2Sensor>
+  rdf:type owl:Class ;
+  rdfs:label "SO2Sensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentSensor> ;
+.
+<http://cqupt.ontology/smartFactory#SO2Sensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#SO2Sensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "100 ug/m^3" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0ug/m^3" ;
+  rdfs:label "SO2Sensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "39ug/m^3" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#TemperatureSensor>
+  rdf:type owl:Class ;
+  rdfs:label "temperatureSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentSensor> ;
+.
+<http://cqupt.ontology/smartFactory#TemporatureHighEvent>
+  rdf:type owl:Class ;
+  rdfs:label "environmentTemporatureHighEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#TemporatureHighEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#TemporatureHighEvent> ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#fireAlarmEvent1> ;
+  rdfs:label "environmentTemporatureHighEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#deviceEvent>
+  rdf:type owl:Class ;
+  rdfs:label "deviceEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#event> ;
+.
+<http://cqupt.ontology/smartFactory#deviceRustEvent>
+  rdf:type owl:Class ;
+  rdfs:label "deviceRustEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#deviceRustEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#deviceRustEvent> ;
+  rdfs:label "deviceRustEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#environment>
+  rdf:type owl:Class ;
+  rdfs:label "environment" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://cqupt.ontology/smartFactory#environment1>
+  rdf:type <http://cqupt.ontology/smartFactory#environment> ;
+  rdfs:label "environment1" ;
+.
+<http://cqupt.ontology/smartFactory#environmentEvent>
+  rdf:type owl:Class ;
+  rdfs:label "weatherEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#event> ;
+.
+<http://cqupt.ontology/smartFactory#environmentSensor>
+  rdf:type owl:Class ;
+  rdfs:label "environmentSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#sensor> ;
+.
+<http://cqupt.ontology/smartFactory#event>
+  rdf:type owl:Class ;
+  rdfs:label "event" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://cqupt.ontology/smartFactory#fireAlarmEvent>
+  rdf:type owl:Class ;
+  rdfs:label "fireAlarmEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#fireAlarmEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#fireAlarmEvent> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  rdfs:label "fireAlarmEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#hasLocation>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "hasLocation" ;
+.
+<http://cqupt.ontology/smartFactory#hasMaxValue>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVDirectingAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVLoadingSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVPoweringSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVPoweringstatusSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVSpeedingSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm1AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm1AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm2AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm2AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm3AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm3AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm4AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm4AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm5AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm5AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm6AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm6AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmXAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmYAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmZAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#COSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#NO2Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#O3Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#PM10Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#PM25Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#SO2Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#TemperatureSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#humiditySensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#roboticArmPoweringMonitorSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationLoadingSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationPoweringMonitorSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationStatusSensor> ;
+  rdfs:label "hasMaxValue" ;
+  rdfs:range xsd:string ;
+.
+<http://cqupt.ontology/smartFactory#hasMinValue>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVDirectingAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVLoadingSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVPoweringSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVPoweringstatusSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVSpeedingSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm1AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm1AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm2AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm2AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm3AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm3AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm4AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm4AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm5AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm5AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm6AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm6AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmXAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmYAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmZAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#COSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#NO2Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#O3Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#PM10Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#PM25Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#SO2Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#TemperatureSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#humiditySensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#roboticArmPoweringMonitorSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationLoadingSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationPoweringMonitorSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationStatusSensor> ;
+  rdfs:label "hasMinValue" ;
+  rdfs:range xsd:string ;
+.
+<http://cqupt.ontology/smartFactory#hasObject>
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#smartFactory> ;
+  rdfs:label "hasObject" ;
+  rdfs:range <http://cqupt.ontology/smartFactory#AGVrobot> ;
+  rdfs:range <http://cqupt.ontology/smartFactory#environment> ;
+  rdfs:range <http://cqupt.ontology/smartFactory#roboticArm> ;
+  rdfs:range <http://cqupt.ontology/smartFactory#sensor> ;
+  rdfs:range <http://cqupt.ontology/smartFactory#station> ;
+.
+<http://cqupt.ontology/smartFactory#hasProbabilityValueOf>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "hasProbabilityValueOf" ;
+.
+<http://cqupt.ontology/smartFactory#hasSensor>
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "hasSensor" ;
+.
+<http://cqupt.ontology/smartFactory#hasStatusCode>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVPoweringstatusSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationStatusSensor> ;
+  rdfs:label "hasStatusCode" ;
+  rdfs:range xsd:string ;
+.
+<http://cqupt.ontology/smartFactory#hasValuer>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVDirectingAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm1AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm1AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm2AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm2AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm3AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm3AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm4AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm4AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm5AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm5AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm6AxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm6AxisTorqueSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmXAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmYAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmZAxisAngleSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#COSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#NO2Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#O3Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#PM10Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#PM25Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#SO2Sensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#TemperatureSensor> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#humiditySensor> ;
+  rdfs:label "hasValue" ;
+  rdfs:range xsd:string ;
+.
+<http://cqupt.ontology/smartFactory#humiditySensor>
+  rdf:type owl:Class ;
+  rdfs:label "humiditySensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentSensor> ;
+.
+<http://cqupt.ontology/smartFactory#humiditySensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#humiditySensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "100%" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0%" ;
+  rdfs:label "humiditySensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "56%" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#isHappended>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVDirectingFaultEvent> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVLoadingFaultEvent> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVPoweringFaultEvent> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#AGVSpeedingFaultEvent> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm1AxisAngleFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm1AxisTorqueFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm2AxisAngleFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm2AxisTorqueFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm3AxisAngleFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm3AxisTorqueFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm4AxisAngleFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm4AxisTorqueFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm5AxisAngleFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm5AxisTorqueFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm6AxisAngleFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#Arm6AxisTorqueFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmXAxisFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmYAxisFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#ArmZAxisFault> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationLoadingFaultEvent> ;
+  rdfs:domain <http://cqupt.ontology/smartFactory#stationStatusFaultEvent> ;
+  rdfs:label "isHappended" ;
+  rdfs:range xsd:boolean ;
+.
+<http://cqupt.ontology/smartFactory#leadTo>
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "leadTo" ;
+.
+<http://cqupt.ontology/smartFactory#poweringEvent>
+  rdf:type owl:Class ;
+  rdfs:label "poweringEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#event> ;
+.
+<http://cqupt.ontology/smartFactory#poweringOffEvent>
+  rdf:type owl:Class ;
+  rdfs:label "poweringOffEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#poweringEvent> ;
+.
+<http://cqupt.ontology/smartFactory#poweringOffEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#poweringOffEvent> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  rdfs:label "poweringOffEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#poweringOverLoadingEvent>
+  rdf:type owl:Class ;
+  rdfs:label "poweringOverLoadingEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#poweringEvent> ;
+.
+<http://cqupt.ontology/smartFactory#poweringOverLoadingEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#poweringOverLoadingEvent> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#poweringOffEvent1> ;
+  rdfs:label "poweringOverLoadingEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#roboticArm>
+  rdf:type owl:Class ;
+  rdfs:label "roboticArm" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://cqupt.ontology/smartFactory#roboticArm1>
+  rdf:type <http://cqupt.ontology/smartFactory#roboticArm> ;
+  rdfs:label "roboticArm1" ;
+.
+<http://cqupt.ontology/smartFactory#roboticArm2>
+  rdf:type <http://cqupt.ontology/smartFactory#roboticArm> ;
+  rdfs:label "roboticArm2" ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "AGVFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#deviceEvent> ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmLacotionFault>
+  rdf:type owl:Class ;
+  rdfs:label "roboticArmLacotionFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmLacotionFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#roboticArmLacotionFault> ;
+  rdfs:label "roboticArmLacotionFault1" ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmLiftingFault>
+  rdf:type owl:Class ;
+  rdfs:label "roboticArmLiftingFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmLiftingFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#roboticArmLiftingFault> ;
+  rdfs:label "roboticArmLiftingFault1" ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmPoweingFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "roboticArmPoweingFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmPoweingFaultEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#roboticArmPoweingFaultEvent> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.02" ;
+  rdfs:label "roboticArmPoweingFaultEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmPoweringMonitorSensor>
+  rdf:type owl:Class ;
+  rdfs:label "roboticArmPoweringMonitorSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#roboticArmSensor> ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmPoweringMonitorSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#roboticArmPoweringMonitorSensor> ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "50KW" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "30KW" ;
+  rdfs:label "roboticArmPoweringMonitorSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "40KW" ;
+.
+<http://cqupt.ontology/smartFactory#roboticArmSensor>
+  rdf:type owl:Class ;
+  rdfs:label "roboticArmSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#sensor> ;
+.
+<http://cqupt.ontology/smartFactory#sensor>
+  rdf:type owl:Class ;
+  rdfs:label "sensor" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://cqupt.ontology/smartFactory#smartFactory>
+  rdf:type owl:Class ;
+  rdfs:label "smartFactory" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://cqupt.ontology/smartFactory#smartFactoryA>
+  rdf:type <http://cqupt.ontology/smartFactory#smartFactory> ;
+  rdfs:label "smartFactoryA" ;
+.
+<http://cqupt.ontology/smartFactory#station>
+  rdf:type owl:Class ;
+  rdfs:label "station" ;
+  rdfs:subClassOf owl:Thing ;
+.
+<http://cqupt.ontology/smartFactory#station1>
+  rdf:type <http://cqupt.ontology/smartFactory#station> ;
+  rdfs:label "station1" ;
+.
+<http://cqupt.ontology/smartFactory#station2>
+  rdf:type <http://cqupt.ontology/smartFactory#station> ;
+  rdfs:label "station2" ;
+.
+<http://cqupt.ontology/smartFactory#station3>
+  rdf:type <http://cqupt.ontology/smartFactory#station> ;
+  rdfs:label "station3" ;
+.
+<http://cqupt.ontology/smartFactory#station4>
+  rdf:type <http://cqupt.ontology/smartFactory#station> ;
+  rdfs:label "station4" ;
+.
+<http://cqupt.ontology/smartFactory#stationFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "stationFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#deviceEvent> ;
+.
+<http://cqupt.ontology/smartFactory#stationLoadingFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "stationLoadingFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#stationFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#stationLoadingFaultEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#stationLoadingFaultEvent> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.02" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#stationStoppingWorkingFault1> ;
+  rdfs:label "stationLoadingFaultEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#stationLoadingSensor>
+  rdf:type owl:Class ;
+  rdfs:label "stationLoadingSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#stationSensor> ;
+.
+<http://cqupt.ontology/smartFactory#stationLoadingSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#stationLoadingSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "20KG" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0KG" ;
+  rdfs:label "stationLoadingSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "10KG" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#stationPoweringMonitorSensor>
+  rdf:type owl:Class ;
+  rdfs:label "stationPoweringMonitorSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#stationSensor> ;
+.
+<http://cqupt.ontology/smartFactory#stationPoweringMonitorSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#stationPoweringMonitorSensor> ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "15KW" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "10KW" ;
+  rdfs:label "stationPoweringMonitorSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "10KW" ;
+.
+<http://cqupt.ontology/smartFactory#stationSensor>
+  rdf:type owl:Class ;
+  rdfs:label "stationSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#sensor> ;
+.
+<http://cqupt.ontology/smartFactory#stationStatusFaultEvent>
+  rdf:type owl:Class ;
+  rdfs:label "stationStatusFaultEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#stationFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#stationStatusFaultEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#stationStatusFaultEvent> ;
+  <http://cqupt.ontology/smartFactory#hasProbabilityValueOf> "0.03" ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#stationStoppingWorkingFault1> ;
+  rdfs:label "stationStatusFaultEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#stationStatusSensor>
+  rdf:type owl:Class ;
+  rdfs:label "stationstatusSensor" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#stationSensor> ;
+.
+<http://cqupt.ontology/smartFactory#stationStoppingWorkingFault>
+  rdf:type owl:Class ;
+  rdfs:label "stationStoppingWorkingFault" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#stationFaultEvent> ;
+.
+<http://cqupt.ontology/smartFactory#stationStoppingWorkingFault1>
+  rdf:type <http://cqupt.ontology/smartFactory#stationStoppingWorkingFault> ;
+  rdfs:label "stationStoppingWorkingFault1" ;
+.
+<http://cqupt.ontology/smartFactory#stationstatusSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#stationStatusSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "10" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0" ;
+  <http://cqupt.ontology/smartFactory#hasStatusCode> "0" ;
+  rdfs:label "stationstatusSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "0 status" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#temperatureSensor1>
+  rdf:type <http://cqupt.ontology/smartFactory#TemperatureSensor> ;
+  <http://cqupt.ontology/smartFactory#hasLocation> "S311" ;
+  <http://cqupt.ontology/smartFactory#hasMaxValue> "100ug/m^3" ;
+  <http://cqupt.ontology/smartFactory#hasMinValue> "0ug/m^3" ;
+  rdfs:label "temperatureSensor1" ;
+  <http://www.w3.org/ns/sosa#hasOutput> "46ug/m^3" ;
+  <http://www.w3.org/ns/sosa#resultTime> "2021-01-07T15:30:08+08:00" ;
+.
+<http://cqupt.ontology/smartFactory#wetEvent>
+  rdf:type owl:Class ;
+  rdfs:label "wetEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#environmentEvent> ;
+.
+<http://cqupt.ontology/smartFactory#wetEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#wetEvent> ;
+  <http://cqupt.ontology/smartFactory#isHappended> "false"^^xsd:boolean ;
+  <http://cqupt.ontology/smartFactory#leadTo> <http://cqupt.ontology/smartFactory#deviceRustEvent1> ;
+  rdfs:label "wetEvent1" ;
+.
+<http://cqupt.ontology/smartFactory#workerPoisoningEvent>
+  rdf:type owl:Class ;
+  rdfs:label "workerPoisoningEvent" ;
+  rdfs:subClassOf <http://cqupt.ontology/smartFactory#event> ;
+.
+<http://cqupt.ontology/smartFactory#workerPoisoningEvent1>
+  rdf:type <http://cqupt.ontology/smartFactory#workerPoisoningEvent> ;
+  rdfs:label "workerPoisoningEvent1" ;
+.
+<http://www.w3.org/ns/sosa#hasOutput>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "hasOutput" ;
+.
+<http://www.w3.org/ns/sosa#resultTime>
+  rdf:type owl:DatatypeProperty ;
+  rdfs:label "resultTime" ;
+.

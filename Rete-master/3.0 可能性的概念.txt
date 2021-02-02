@@ -1,0 +1,61 @@
+AGVDirectingFaultEvent  --> AGVDeviationFault
+AGVLoadingFaultEvent    --> AGVDeviationFault
+AGVPoweringFaultEvent   --> AGVDeviationFault
+AGVSpeedingFaultEvent   --> AGVDeviationFault
+
+AGVPoweringFaultEvent   --> AGVRebootFault（两个条件同时发生）
+AGVLoadingFaultEvent    --> AGVStoppedFault
+
+AGVSpeedingFaultEvent   --> productionAccident（两个条件同时发生）
+AGVDirectingFaultEvent  --> productionAccident
+
+Arm1AxisAngleFault      --> lacotionFault
+Arm2AxisAngleFault      --> lacotionFault
+Arm3AxisAngleFault      --> lacotionFault
+Arm4AxisAngleFault      --> lacotionFault
+Arm5AxisAngleFault      --> lacotionFault
+Arm6AxisAngleFault      --> lacotionFault
+
+Arm1AxisAngleFault      --> systemFault（三个条件同时发生）
+Arm2AxisAngleFault      --> systemFault
+Arm3AxisAngleFault      --> systemFault
+
+Arm4AxisAngleFault      --> systemFault（三个条件同时发生）
+Arm5AxisAngleFault      --> systemFault
+Arm6AxisAngleFault      --> systemFault
+
+Arm1AxisTorqueFault     --> liftingFault
+Arm2AxisTorqueFault     --> liftingFault
+Arm3AxisTorqueFault     --> liftingFault
+Arm4AxisTorqueFault     --> liftingFault
+Arm5AxisTorqueFault     --> liftingFault
+Arm6AxisTorqueFault     --> liftingFault
+
+Arm1AxisTorqueFault     
+Arm2AxisTorqueFault     
+Arm3AxisTorqueFault     --> systemFault （三个条件同时发生）
+
+Arm4AxisTorqueFault     
+Arm5AxisTorqueFault     
+Arm6AxisTorqueFault     --> systemFault （三个条件同时发生）
+
+ArmXAxisFault           --> lacotionFault
+ArmYAxisFault           --> lacotionFault
+ArmZAxisFault           --> lacotionFault
+
+stationLoadingFaultEvent --> stoppingWork
+stationStatusFaultEvent  --> stoppingWork
+
+TemporatureHighEvent     --> fireAlarmEvent
+
+wetEvent                 --> deviceRust
+
+COEvent                  
+NO2Event
+O3Event
+PM10Event
+PM25Event
+SO2Event                 --> workerPoisoning
+
+poweringOverLoadingEvent --> poweringOffEvent
+

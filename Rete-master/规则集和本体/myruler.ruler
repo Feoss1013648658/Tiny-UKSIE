@@ -1,0 +1,58 @@
+START
+	PRS:
+	"?x",":subclassof","?y","?pb1"
+	"?y",":subclassof","?z","?pb2"
+	CNS:
+	"matched rule1",":subclassof ","",""
+	"?x",":subclassof","?y","?pb1"
+	"?y",":subclassof","?z","?pb2"
+	"?x",":subcalssof","?z","?pb3"
+END	
+START
+	PRS:
+	"?s1",":type","?x1","?pb3"
+	"?x1",":subclassof","?y1","?pb1"
+	"?y1",":subclassof","?z1","?pb2"
+	CNS:
+	"matched rule2",":subclassof and type ","",""
+	"?x1",":subclassof","?y1","?pb1"
+	"?y1",":subclassof","?z1","?pb2"
+	"?s1",":type","?x1","?pb3"
+	"?s1",":subclassof","?z1","?pb4"
+END
+START
+	PRS:
+	"?xb",":leadTo1","?b","?pb1"
+	"?yb",":leadTo2","?b","?pb2"
+	"?zb",":leadTo3","?b","?pb3"
+	"?xb",":hasProbabilityValueOf","?pb1","?pb1"
+	"?yb",":hasProbabilityValueOf","?pb2","?pb2"
+	"?zb",":hasProbabilityValueOf","?pb3","?pb3"
+	"?b",":isHappened","true","?pb4"
+	CNS:
+	"matched ruler pb1","Bayesin","",""
+	"?xb",":leadTo1","?b","?pb1"
+	"?yb",":leadTo2","?b","?pb2"
+	"?zb",":leadTo3","?b","?pb3"
+	"?xb",":hasProbabilityValueOf","?pb1","?pb1"
+	"?yb",":hasProbabilityValueOf","?pb2","?pb2"
+	"?zb",":hasProbabilityValueOf","?pb3","?pb3"
+	"?b",":isHappened","true","?pb4"
+END
+START
+PRS:
+	"?xb",":leadTo1","?b","?pb1"
+	"?yb",":leadTo2","?b","?pb2"
+	"?zb",":leadTo3","?b","?pb3"
+	"?xb",":hasProbabilityValueOf","?pb1","?pb1"
+	"?yb",":hasProbabilityValueOf","?pb2","?pb2"
+	"?zb",":hasProbabilityValueOf","?pb3","?pb3"
+	CNS:
+	"matched ruler pb2","allprobability","",""
+	"?xb",":leadTo1","?b","?pb1"
+	"?yb",":leadTo2","?b","?pb2"
+	"?zb",":leadTo3","?b","?pb3"
+	"?xb",":hasProbabilityValueOf","?pb1","?pb1"
+	"?yb",":hasProbabilityValueOf","?pb2","?pb2"
+	"?zb",":hasProbabilityValueOf","?pb3","?pb3"
+END

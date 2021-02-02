@@ -1,0 +1,214 @@
+START
+	PRS:
+	"?x",":p","?y","?pb1"
+	"?p",":domain","?c","?pb2"
+	CNS:
+	"matched  ruler3","","",""
+	"?x",":p","?y","?pb1"
+	"?p",":domain","?c","?pb2"
+	"?x",":type","?c","?pb3"
+END
+START
+	PRS:
+	"?x",":p","?y","?pb1"
+	"?p",":range","?c","?pb2"
+	CNS:
+	"matched  ruler4","","",""
+	"?x",":p","?y","?pb1"
+	"?p",":domain","?c","?pb2"
+	"?y",":type","?c","?pb3"
+END
+START
+	PRS:
+	"?a",":subPropertyOf","?b","?pb1"
+	"?b",":subPropertyOf","?c","?pb2"
+	CNS:
+	"matched  ruler5","","",""
+	"?a",":subPropertyOf","?b","?pb1"
+	"?b",":subPropertyOf","?c","?pb2"
+	"?a",":subPropertyOf","?c","?pb3"
+END
+START
+	PRS:
+	"?a",":type","?Property","?pb1"
+	CNS:
+	"matched  ruler6","","",""
+	"?a",":type","?Property","?pb1"
+	"?a",":subPropertyOf","?a","?pb2"
+END
+START	
+	PRS:
+	"?a",":p","?b","?pb1" 
+	"?p",":subPropertyOf","?q","?pb2"
+	CNS:
+	"matched  ruler7","","",""
+	"?a",":p","?b","?pb1" 
+	"?p",":subPropertyOf","?q","?pb2"
+	"?a",":q","?b","?pb3"
+END
+START
+	PRS:
+	"?a",":type","?rdfs:Class","?pb1"
+	CNS:
+	"matched  ruler8","","",""
+	"?a",":type","?rdfs:Class","?pb1"
+	"?a",":subClassOf","?a","?pb2"
+END
+START
+	PRS:
+	"?x",":subClassOf","?y","?pb1"
+	"?a",":type","?x","?pb2"
+	CNS:
+	"matched  ruler9","","",""
+	"?x",":subClassOf","?y","?pb1"
+	"?a",":type","?x","?pb2"
+	"?a",":type","?y","?pb3"
+END
+START
+	PRS:
+	"?x",":type","?rdfs:ContainerMembershipProperty","?pb1"
+	"?rdfs:member",":type","property","?pb2"
+	CNS:
+	"matched  ruler10","","",""
+	"?x",":type","?rdfs:ContainerMembershipProperty","?pb1"
+	"?rdfs:member",":type","property","?pb2"
+	"?x",":subPropertyOf","?rdfs:member","?pb3"
+END
+START
+	PRS:
+	"?x",":domain","?y","?pb1"
+	"?y",":subClassOf","?z","?pb2"
+	CNS:
+	"matched  ruler11","","",""
+	"?x",":domain","?y","?pb1"
+	"?y",":subClassOf","?z","?pb2"
+	"?x",":domain","?z","pb3"
+END
+START
+	PRS:
+	"?x",":range","?y","?pb1"
+	"?y",":subClassOf","?z","?pb2"
+	CNS:
+	"matched  ruler12","","",""
+	"?x",":range","?y","?pb1"
+	"?y",":subClassOf","?z","?pb2"
+	"?x",":range","?z","?pb3"
+END
+START
+	PRS:
+	"?C",":disjointWith","?D","?pb1"
+	"?X",":type","?C","?pb2"
+	"?Y",":type","?D","?pb3"
+	CNS:
+	"matched  ruler14","","",""
+	"?C",":disjointWith","?D","?pb1"
+	"?X",":type","?C","?pb2"
+	"?Y",":type","?D","?pb3"
+	"?X",":differentFrom","?Y","?pb4"
+END
+START
+	PRS:
+	"?P",":equivalentProperty","?Q","?pb1"
+	CNS:
+	"matched  ruler15","","",""
+	"?P",":equivalentProperty","?Q","?pb1"
+	"?P",":subPropertyOf","?Q","?pb2"
+	"?Q",":subPropertyOf","?P","?pb3"
+END
+START
+	PRS:
+	"?P",":subPropertyOf","?Q","?pb1"
+	"?Q",":subPropertyOf","?P","?pb2"
+	CNS:
+	"matched  ruler16","","",""
+	"?P",":subPropertyOf","?Q","?pb1"
+	"?Q",":subPropertyOf","?P","?pb2"
+	"?P",":equivalentProperty","?Q","?pb3"
+END
+START
+	PRS:
+	"?P",":sameAs","?Q","?pb1"
+	"?P",":type","?rdf:Property","?pb2"
+	"?Q",":type","?rdf:Property","?pb3"
+	CNS:
+	"matched  ruler17","","",""
+	"?P",":sameAs","?Q","?pb1"
+	"?P",":type","?rdf:Property","?pb2"
+	"?Q",":type","?rdf:Property","?pb3"
+	"?P",":equivalentProperty","?Q","?pb4"
+END
+START
+	PRS:
+	"?P",":equivalentClass","?Q","?pb1"
+	CNS:
+	"matched  ruler18","","",""
+	"?P",":equivalentClass","?Q","?pb1"
+	"?P",":subClassOf","?Q","?pb2"
+	"?Q",":subClassOf","?P","?pb3"
+END
+START
+	PRS:
+	"?P",":subClassOf","?Q","?pb1"
+	"?Q",":subClassOf","?P","?pb2"
+	CNS:
+	"matched  ruler19","","",""
+	"?P",":subClassOf","?Q","?pb1"
+	"?Q",":subClassOf","?P","?pb2"
+	"?P",":equivalentClass","?Q","?pb3"
+END
+START
+	PRS:
+	"?P",":sameAs","?Q","?pb1"
+	"?P",":type","?rdfs:Class","?pb2"
+	"?Q",":type","?rdfs:Class","?pb3"
+	CNS:
+	"matched  ruler20","","",""
+	"?P",":sameAs","?Q","?pb1"
+	"?P",":type","?rdfs:Class","?pb2"
+	"?Q",":type","?rdfs:Class","?pb3"
+	"?P",":equivalentClass","?Q","?pb4"
+END
+START
+	PRS:
+	"?P",":inverseOf","?Q","?pb1"
+	CNS:
+	"matched  ruler21","","",""
+	"?P",":inverseOf","?Q","?pb1"
+	"?Q",":inverseOf","?P","?pb2"
+END
+START
+	PRS:
+	"?P",":inverseOf","?Q","?pb1"
+	"?P",":type","?owl:FunctionalProperty","?pb2"
+	"?owl:FunctionalProperty",":inverseOf","?owl:InverseFunctionalProperty","?pb3"
+	CNS:
+	"matched  ruler22","","",""
+	"?P",":inverseOf","?Q","?pb1"
+	"?P",":type","?owl:FunctionalProperty","?pb2"
+	"?owl:FunctionalProperty",":inverseOf","?owl:InverseFunctionalProperty","?pb3"
+	"?Q",":type","?owl:InverseFunctionalProperty","?pb4"
+END
+START
+	PRS:
+	"?P",":type","?owl:SymmetricProperty","?pb1"
+	"?X",":P","?Y","?pb2"
+	CNS:
+	"matched  ruler23","","",""
+	"?P",":type","?owl:SymmetricProperty","?pb1"
+	"?X",":P","?Y","?pb2"
+	"?Y",":P","?X","?pb3"
+END
+START
+	PRS:
+	"?c",":type","?owl:Restriction","?pb1"
+	"?c",":onProperty","?p","?pb2"
+	"?c",":hasValue","?v","?pb3"
+	"?x",":type","?c","?pb4"
+	CNS:
+	"matched  ruler24","","",""
+	"?c",":type","?owl:Restriction","?pb1"
+	"?c",":onProperty","?p","?pb2"
+	"?c",":hasValue","?v","?pb3"
+	"?x",":type","?c","?pb4"
+	"?x",":p","?v","?pb5"
+END

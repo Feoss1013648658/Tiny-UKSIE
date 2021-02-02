@@ -1,0 +1,810 @@
+START
+	PRS:
+	"?x",":subClassOf","?y","?pb1"
+	"?y",":subClassOf","?z","?pb2"
+	CNS:
+	"matched_rule1",":subClassOf","",""
+	"?x",":subClassOf","?y","?pb1"
+	"?y",":subClassOf","?z","?pb2"
+	"?x",":subCalssof","?z","?pb3"
+END:
+START
+	PRS:
+	"?s1",":type","?x1","?pb3"
+	"?x1",":subClassOf","?y1","?pb1"
+	"?y1",":subClassOf","?z1","?pb2"
+	CNS:
+	"matched_rule2",":subClassOf_and_type","",""
+	"?s1",":type","?x1","?pb3"
+	"?x1",":subClassOf","?y1","?pb1"
+	"?y1",":subClassOf","?z1","?pb2"
+	"?s1",":subClassOf","?z1","?pb4"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?b",":isHappened","true","?pb2"
+	CNS:
+	"matched_probability_ruler1","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?b",":isHappened","true","?pb2"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?b",":isHappened","true","?pb3"
+	CNS:
+	"matched_probability_ruler2","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?b",":isHappened","true","?pb3"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?b",":isHappened","true","?pb4"
+	CNS:
+	"matched_probability_ruler3","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?b",":isHappened","true","?pb4"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?b",":isHappened","true","?pb5"
+	CNS:
+	"matched_probability_ruler4","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?b",":isHappened","true","?pb5"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?b",":isHappened","true","?pb6"
+	CNS:
+	"matched_probability_ruler5","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?b",":isHappened","true","?pb6"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?b",":isHappened","true","?pb7"
+	CNS:
+	"matched_probability_ruler6","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?b",":isHappened","true","?pb7"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?b",":isHappened","true","?pb8"
+	CNS:
+	"matched_probability_ruler7","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?b",":isHappened","true","?pb8"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?b",":isHappened","true","?pb9"
+	CNS:
+	"matched_probability_ruler8","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?b",":isHappened","true","?pb9"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x9",":leadTo","?b","?pb9"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?x9",":hasProbabilityValueOf","?pb9","?pb9"
+	"?b",":isHappened","true","?pb10"
+	CNS:
+	"matched_probability_ruler9","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x9",":leadTo","?b","?pb9"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?x9",":hasProbabilityValueOf","?pb9","?pb9"
+	"?b",":isHappened","true","?pb10"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x9",":leadTo","?b","?pb9"
+	"?x10",":leadTo","?b","?pb10"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?x9",":hasProbabilityValueOf","?pb9","?pb9"
+	"?x10",":hasProbabilityValueOf","?pb10","?pb10"
+	"?b",":isHappened","true","?pb11"
+	CNS:
+	"matched_probability_ruler10","Bayesin","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x9",":leadTo","?b","?pb9"
+	"?x10",":leadTo","?b","?pb10"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?x9",":hasProbabilityValueOf","?pb9","?pb9"
+	"?x10",":hasProbabilityValueOf","?pb10","?pb10"
+	"?b",":isHappened","true","?pb11"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x9",":leadTo","?b","?pb9"
+	"?x10",":leadTo","?b","?pb10"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?x9",":hasProbabilityValueOf","?pb9","?pb9"
+	"?x10",":hasProbabilityValueOf","?pb10","?pb10"
+	CNS:
+	"matched_probability_ruler10","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x9",":leadTo","?b","?pb9"
+	"?x10",":leadTo","?b","?pb10"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?x9",":hasProbabilityValueOf","?pb9","?pb9"
+	"?x10",":hasProbabilityValueOf","?pb10","?pb10"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x9",":leadTo","?b","?pb9"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?x9",":hasProbabilityValueOf","?pb9","?pb9"
+	CNS:
+	"matched_probability_ruler9","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x9",":leadTo","?b","?pb9"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	"?x9",":hasProbabilityValueOf","?pb9","?pb9"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+	CNS:
+	"matched_probability_ruler8","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x8",":leadTo","?b","?pb8"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	"?x8",":hasProbabilityValueOf","?pb8","?pb8"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+	CNS:
+	"matched_probability_ruler7","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x7",":leadTo","?b","?pb7"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	"?x7",":hasProbabilityValueOf","?pb7","?pb7"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+	CNS:
+	"matched_probability_ruler6","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x6",":leadTo","?b","?pb6"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	"?x6",":hasProbabilityValueOf","?pb6","?pb6"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+	CNS:
+	"matched_probability_ruler5","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x5",":leadTo","?b","?pb5"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	"?x5",":hasProbabilityValueOf","?pb5","?pb5"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+	CNS:
+	"matched_probability_ruler4","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x4",":leadTo","?b","?pb4"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	"?x4",":hasProbabilityValueOf","?pb4","?pb4"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+	CNS:
+	"matched_probability_ruler3","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x3",":leadTo","?b","?pb3"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	"?x3",":hasProbabilityValueOf","?pb3","?pb3"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+	CNS:
+	"matched_probability_ruler2","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x2",":leadTo","?b","?pb2"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	"?x2",":hasProbabilityValueOf","?pb2","?pb2"
+END:
+START
+	PRS:
+	"?x1",":leadTo","?b","?pb1"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+	CNS:
+	"matched_probability_ruler1","allprobability","",""
+	"?x1",":leadTo","?b","?pb1"
+	"?x1",":hasProbabilityValueOf","?pb1","?pb1"
+END:
+START
+	PRS:
+	"dd",":leadTo","dd","dd"
+	CNS:
+	"matched_probability_ruler1","allprobability","",""
+	"dd",":leadTo","dd","dd"
+END:
+START
+	PRS:
+	"dd",":leadTo","dd","dd"
+	CNS:
+	"matched_probability_ruler1","allprobability","",""
+	"dd",":leadTo","dd","dd"
+END:
+START
+	PRS:
+	"?x",":p","?y","?pb1"
+	"?p",":domain","?c","?pb2"
+	CNS:
+	"matched__ruler3","","",""
+	"?x",":p","?y","?pb1"
+	"?p",":domain","?c","?pb2"
+	"?x",":type","?c","?pb3"
+END:
+START
+	PRS:
+	"?x",":p","?y","?pb1"
+	"?p",":range","?c","?pb2"
+	CNS:
+	"matched__ruler4","","",""
+	"?x",":p","?y","?pb1"
+	"?p",":range","?c","?pb2"
+	"?y",":type","?c","?pb3"
+END:
+START
+	PRS:
+	"?a",":subPropertyOf","?b","?pb1"
+	"?b",":subPropertyOf","?c","?pb2"
+	CNS:
+	"matched__ruler5","","",""
+	"?a",":subPropertyOf","?b","?pb1"
+	"?b",":subPropertyOf","?c","?pb2"
+	"?a",":subPropertyOf","?c","?pb3"
+END:
+START
+	PRS:
+	"?a",":type","?Property","?pb1"
+	CNS:
+	"matched__ruler6","","",""
+	"?a",":type","?Property","?pb1"
+	"?a",":subPropertyOf","?a","?pb2"
+END:
+START
+	PRS:
+	"?p",":subPropertyOf","?q","?pb2"
+	"?a",":p","?b","?pb1"
+	CNS:
+	"matched__ruler7","","",""
+	"?p",":subPropertyOf","?q","?pb2"
+	"?a",":p","?b","?pb1"
+	"?a",":q","?b","?pb3"
+END:
+START
+	PRS:
+	"?a",":type","?rdfs:Class","?pb1"
+	CNS:
+	"matched__ruler8","","",""
+	"?a",":type","?rdfs:Class","?pb1"
+	"?a",":subClassOf","?a","?pb2"
+END:
+START
+	PRS:
+	"?a",":type","?x","?pb2"
+	"?x",":subClassOf","?y","?pb1"
+	CNS:
+	"matched__ruler9","","",""
+	"?a",":type","?x","?pb2"
+	"?x",":subClassOf","?y","?pb1"
+	"?a",":type","?y","?pb3"
+END:
+START
+	PRS:
+	"?x",":type","?rdfs:ContainerMembershipProperty","?pb1"
+	"?rdfs:member",":type","property","?pb2"
+	CNS:
+	"matched__ruler10","","",""
+	"?x",":type","?rdfs:ContainerMembershipProperty","?pb1"
+	"?rdfs:member",":type","property","?pb2"
+	"?x",":subPropertyOf","?rdfs:member","?pb3"
+END:
+START
+	PRS:
+	"?y",":subClassOf","?z","?pb2"
+	"?x",":domain","?y","?pb1"
+	CNS:
+	"matched__ruler11","","",""
+	"?y",":subClassOf","?z","?pb2"
+	"?x",":domain","?y","?pb1"
+	"?x",":domain","?z","pb3"
+END:
+START
+	PRS:
+	"?y",":subClassOf","?z","?pb2"
+	"?x",":range","?y","?pb1"
+	CNS:
+	"matched__ruler12","","",""
+	"?y",":subClassOf","?z","?pb2"
+	"?x",":range","?y","?pb1"
+	"?x",":range","?z","?pb3"
+END:
+START
+	PRS:
+	"?X",":type","?C","?pb2"
+	"?Y",":type","?D","?pb3"
+	"?C",":disjointWith","?D","?pb1"
+	CNS:
+	"matched__ruler14","","",""
+	"?X",":type","?C","?pb2"
+	"?Y",":type","?D","?pb3"
+	"?C",":disjointWith","?D","?pb1"
+	"?X",":differentFrom","?Y","?pb4"
+END:
+START
+	PRS:
+	"?P",":equivalentProperty","?Q","?pb1"
+	CNS:
+	"matched__ruler15","","",""
+	"?P",":equivalentProperty","?Q","?pb1"
+	"?P",":subPropertyOf","?Q","?pb2"
+	"?Q",":subPropertyOf","?P","?pb3"
+END:
+START
+	PRS:
+	"?P",":subPropertyOf","?Q","?pb1"
+	"?Q",":subPropertyOf","?P","?pb2"
+	CNS:
+	"matched__ruler16","","",""
+	"?P",":subPropertyOf","?Q","?pb1"
+	"?Q",":subPropertyOf","?P","?pb2"
+	"?P",":equivalentProperty","?Q","?pb3"
+END:
+START
+	PRS:
+	"?P",":type","?rdf:Property","?pb2"
+	"?Q",":type","?rdf:Property","?pb3"
+	"?P",":sameAs","?Q","?pb1"
+	CNS:
+	"matched__ruler17","","",""
+	"?P",":type","?rdf:Property","?pb2"
+	"?Q",":type","?rdf:Property","?pb3"
+	"?P",":sameAs","?Q","?pb1"
+	"?P",":equivalentProperty","?Q","?pb4"
+END:
+START
+	PRS:
+	"?P",":equivalentClass","?Q","?pb1"
+	CNS:
+	"matched__ruler18","","",""
+	"?P",":equivalentClass","?Q","?pb1"
+	"?P",":subClassOf","?Q","?pb2"
+	"?Q",":subClassOf","?P","?pb3"
+END:
+START
+	PRS:
+	"?P",":subClassOf","?Q","?pb1"
+	"?Q",":subClassOf","?P","?pb2"
+	CNS:
+	"matched__ruler19","","",""
+	"?P",":subClassOf","?Q","?pb1"
+	"?Q",":subClassOf","?P","?pb2"
+	"?P",":equivalentClass","?Q","?pb3"
+END:
+START
+	PRS:
+	"?P",":type","?rdfs:Class","?pb2"
+	"?Q",":type","?rdfs:Class","?pb3"
+	"?P",":sameAs","?Q","?pb1"
+	CNS:
+	"matched__ruler20","","",""
+	"?P",":type","?rdfs:Class","?pb2"
+	"?Q",":type","?rdfs:Class","?pb3"
+	"?P",":sameAs","?Q","?pb1"
+	"?P",":equivalentClass","?Q","?pb4"
+END:
+START
+	PRS:
+	"?P",":inverseOf","?Q","?pb1"
+	CNS:
+	"matched__ruler21","","",""
+	"?P",":inverseOf","?Q","?pb1"
+	"?Q",":inverseOf","?P","?pb2"
+END:
+START
+	PRS:
+	"?P",":type","?owl:FunctionalProperty","?pb2"
+	"?P",":inverseOf","?Q","?pb1"
+	"?owl:FunctionalProperty",":inverseOf","?owl:InverseFunctionalProperty","?pb3"
+	CNS:
+	"matched__ruler22","","",""
+	"?P",":type","?owl:FunctionalProperty","?pb2"
+	"?P",":inverseOf","?Q","?pb1"
+	"?owl:FunctionalProperty",":inverseOf","?owl:InverseFunctionalProperty","?pb3"
+	"?Q",":type","?owl:InverseFunctionalProperty","?pb4"
+END:
+START
+	PRS:
+	"?P",":type","?owl:SymmetricProperty","?pb1"
+	"?X",":P","?Y","?pb2"
+	CNS:
+	"matched__ruler23","","",""
+	"?P",":type","?owl:SymmetricProperty","?pb1"
+	"?X",":P","?Y","?pb2"
+	"?Y",":P","?X","?pb3"
+END:
+START
+	PRS:
+	"?c",":type","?owl:Restriction","?pb1"
+	"?x",":type","?c","?pb4"
+	"?c",":onProperty","?p","?pb2"
+	"?c",":hasValue","?v","?pb3"
+	CNS:
+	"matched__ruler24","","",""
+	"?c",":type","?owl:Restriction","?pb1"
+	"?x",":type","?c","?pb4"
+	"?c",":onProperty","?p","?pb2"
+	"?c",":hasValue","?v","?pb3"
+	"?x",":p","?v","?pb5"
+END:
